@@ -9,19 +9,11 @@ const LineSummary = React.forwardRef((props, ref) => (
       <div className="line__name">
       {props.name}
       </div>
-      <div className="line__status">
       <div className="line__status__indicator" style={{backgroundColor: props.lineStatusParser(props.status)}}/>
-      </div>
     </div>
   ));
 
 const PosedComponent = posed(LineSummary)({
-draggable: 'x',
-dragBounds: { left: '-100%', right: '0' },
-dragEnd: { 
-  x: 0,
-  y: 0,
-  transition: { type: 'spring' }},
  open: {
    y: 0,
    opacity: 1

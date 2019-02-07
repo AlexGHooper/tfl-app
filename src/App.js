@@ -7,6 +7,7 @@ import {getLineStatus, getAllLinesStatus} from './actions/api';
 import lineColours from './lineColours';
 
 import LineSummary from './components/LineSummary';
+import MenuBar from './components/MenuBar';
 
 const AnimateGroup = posed.div({
   open: {
@@ -71,6 +72,7 @@ class App extends Component {
               </AnimateGroup>
           </div>
         </header>
+        <MenuBar />
       </div>
     );
   }
