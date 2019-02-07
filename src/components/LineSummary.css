@@ -1,0 +1,127 @@
+.line {
+ border-left: 4px solid black;
+ box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.06);
+ margin: 23px 0;
+ padding: 15px;
+ border-radius: 4px;
+ background-color: white;
+}
+
+.line__name {
+color: black;
+font-weight: 600;
+}
+
+.line__status {
+color: grey;
+}
+
+.line__status__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
+.bakerloo {
+ /* background-color: rgba(179, 99, 5, 0.2); */
+  border-left: 4px solid rgba(179, 99, 5, 0.8);
+}
+
+.bakerloo .line__name {
+  color: rgba(179, 99, 5, 0.9);
+}
+
+.central {
+  /* background-color: rgba(227, 32, 23, 0.2); */
+  border-left: 4px solid rgba(227, 32, 23, 0.8);
+}
+
+.central .line__name {
+  color: rgba(227, 32, 23, 0.9);
+}
+
+.circle {
+  /* background-color: rgba(255, 211, 0, 0.2); */
+  border-left: 4px solid rgba(255, 211, 0, 0.8);
+}
+
+.circle .line__name {
+  color: rgba(255, 211, 0, 0.8);
+}
+
+.district {
+  /* background-color: rgba(0, 120, 42, 0.2); */
+  border-left: 4px solid rgba(0, 120, 42, 0.8);
+}
+
+.district .line__name {
+  color: rgba(0, 120, 42, 0.8);
+}
+
+.hammersmith {
+  /* background-color: rgba(243, 169, 187, 0.2); */
+  border-left: 4px solid rgba(243, 169, 187, 0.2);
+}
+
+.hammersmith .line__name {
+  color: rgba(243, 169, 187, 0.2);
+}
+
+.jubilee {
+  /* background-color: rgba(160, 165, 169, 0.2); */
+  border-left: 4px solid rgba(160, 165, 169, 0.8);
+}
+
+.jubilee .line__name {
+  color: rgba(160, 165, 169, 0.8);
+}
+
+.metropolitan {
+  /* background-color: rgba(155, 0, 86, 0.2); */
+  border-left: 4px solid rgba(155, 0, 86, 0.8);
+}
+
+.metropolitan .line__name {
+  color: rgba(155, 0, 86, 0.8);
+}
+
+.northern {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border-left: 4px solid rgba(0, 0, 0, 0.8);
+}
+
+.northern .line__name {
+  color: 4px solid rgba(0, 0, 0, 0.8);
+}
+
+.piccadilly {
+  /* background-color: rgba(0, 54, 136, 0.2); */
+  border-left: 4px solid rgba(0, 54, 136, 0.8);
+}
+
+.piccadilly .line__name {
+  color: rgba(0, 54, 136, 0.8);
+}
+
+.victoria {
+  /* background-color: rgba(0, 152, 212, 0.2); */
+  border-left: 4px solid rgba(0, 152, 212, 0.8);
+}
+
+.victoria .line__name {
+  color: rgba(0, 152, 212, 0.8);
+}
+
+.waterloo {
+  /* background-color: rgba(149, 205, 186, 0.2); */
+  border-left: 4px solid rgba(149, 205, 186, 0.8);
+}
+
+.waterloo .line__name {
+  color: rgba(149, 205, 186, 0.8);
+}
