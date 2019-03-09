@@ -15,3 +15,9 @@ export const getAllLinesStatus = async () => {
   return await json;
 }
 
+export const getLineStations = async(id) => {
+  const response = await fetch(`https://api.tfl.gov.uk/Line/${id}/StopPoints?app_id=${auth.API_ID}&app_key=${auth.API_KEY}`);
+  const json = await response.json();
+  return json;
+}
+

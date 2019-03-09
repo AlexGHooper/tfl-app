@@ -1,27 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import posed from 'react-pose';
+
+import LineMenu from './LineMenu';
 
 import './LineSummary.css';
 
-const LineSummary = React.forwardRef((props, ref) => (
+const LineSummary = React.forwardRef((props, ref) => {
 
-    <div ref={ref} className={`line ${props.lineColour(props.lineId)}`}>
+  const [clicked, setClicked] = useState(0);
+
+  return(
+    <div ref={ref}
+    onClick={ () => setClicked(1) }
+    className={`line ${props.lineColour(props.lineId)}`}
+    >
       <div className="line__name">
-      {props.name}
+      { props.name }
       </div>
-      <div className="line__status__indicator" style={{backgroundColor: props.lineStatusParser(props.status)}}/>
+      <div className="line__status__indicator"
+      style={{backgroundColor: props.lineStatusParser(props.status)}}/>
+      {clicked ? <LineMenu /> : false }
     </div>
-  ));
+  )});
 
 const PosedComponent = posed(LineSummary)({
- open: {
+ mounted: {
    y: 0,
-   opacity: 1
+   opacity: 1,
  },
- closed: {
+ unmounted: {
   y: 20,
   opacity: 0,
- }
+ },
 });
 
 export default PosedComponent

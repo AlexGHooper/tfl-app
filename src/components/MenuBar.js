@@ -9,9 +9,9 @@ class MenuBar extends Component {
     return (
      <div className="menu-bar">
       <ul className="menu-bar__wrapper">
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>
+        <li>Nearest Station</li>
+        <li>Tube Lines</li>
+        <li>Meetup</li>
       </ul>
      </div>
     );
