@@ -25,6 +25,7 @@
   width: 300%;
   transition: transform 0.3s;
   transform: translateX(0vw);
+  margin-top: 60px;
 }
 
 .line-wrapper {
@@ -37,5 +38,4 @@
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
-  padding-top: 80px;
 }

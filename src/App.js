@@ -17,6 +17,7 @@ import Header from "./components/Header";
 import MenuBar from "./components/MenuBar";
 import Page from "./components/Page";
 import Favourites from "./components/Favourites";
+import HomeBlock from "./components/HomeBlock";
 import { throws } from "assert";
 
 const AnimateGroup = posed.div({
@@ -85,7 +86,7 @@ class App extends Component {
     } else {
       return this.state.favourites.map((line, i) => (
         <LineSummary
-          key={i}
+          key={`fav-${i}`}
           name={line.name}
           lineId={line.id}
           status={line.lineStatuses[0].statusSeverityDescription}
@@ -121,6 +122,8 @@ class App extends Component {
       return "#f4a442";
     } else if (status === "Severe Delays") {
       return "#f44141";
+    } else if (status === "Part Closure") {
+      return "#f98b36";
     }
   }
 
@@ -155,6 +158,7 @@ class App extends Component {
         >
           <Page>
             <Favourites favStatus={this.favStatus} />
+            <HomeBlock />
           </Page>
           <Page>
             <div className="line-wrapper">

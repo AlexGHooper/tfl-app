@@ -2,7 +2,7 @@ import React from "react";
 
 const Favourites = props => {
   return (
-    <div>
+    <div className="favourites">
       <div>Favourites</div>
       {props.favStatus()}
     </div>

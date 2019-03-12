@@ -11,7 +11,7 @@
 }
 
 .menu-bar ul {
-  padding: 0;
+  padding: 5px 0;
   display: flex;
   justify-content: space-evenly;
   list-style: none;

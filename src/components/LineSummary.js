@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import posed from "react-pose";
 
 import LineMenu from "./LineMenu";
+import Status from "./Status";
 
 import "./LineSummary.css";
 
@@ -11,16 +12,23 @@ const LineSummary = React.forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      onClick={() => setClicked(1)}
+      onClick={() => (clicked ? setClicked(0) : setClicked(1))}
       className={`line ${props.lineColour(props.lineId)}`}
     >
-      <div className="line__name">{props.name}</div>
-      <div
-        className="line__status__indicator"
-        style={{ backgroundColor: props.lineStatusParser(props.status) }}
-      />
+      <div className="line__container">
+        <div className="line__name">{props.name}</div>
+        <div className="line__status__container">
+          <div className="line__status__text">{props.status}</div>
+          <div
+            className="line__status__indicator"
+            style={{ backgroundColor: props.lineStatusParser(props.status) }}
+          />
+        </div>
+      </div>
       {clicked ? (
-        <LineMenu line={props.lineId} addToFav={props.addToFav} />
+        <Fragment>
+          <LineMenu line={props.lineId} addToFav={props.addToFav} />
+        </Fragment>
       ) : (
         false
       )}
