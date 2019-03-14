@@ -3,7 +3,7 @@
   bottom: 0;
   width: 100vw;
   background: white;
-  box-shadow: 0px -2px 10px 2px #0000001c;
+  box-shadow: 0px 0px 4px 0px #0000001c;
 }
 
 .menu-bar__wrapper {
@@ -11,8 +11,13 @@
 }
 
 .menu-bar ul {
-  padding: 5px 0;
+  padding: 0;
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+}
+
+.menu-bar__home {
+  height: 30px;
+  width: 30px;
 }

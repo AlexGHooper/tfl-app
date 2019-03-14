@@ -149,7 +149,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header page="Header" />
+        <Header page="Alex" />
         <div
           className="page-wrapper"
           style={{

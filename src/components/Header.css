@@ -1,6 +1,7 @@
 .header {
   position: fixed;
-  padding: 20px 0;
+  padding: 20px 20px;
+  box-sizing: border-box;
   width: 100vw;
   z-index: 1;
   background: white;
@@ -8,5 +9,6 @@
 }
 
 .header__title {
-
+  text-align: right;
+  font-weight: 600;
 }

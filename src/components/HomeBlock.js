@@ -1,42 +1,55 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import Block from "./Block";
 
 import "./HomeBlock.css";
 
+import tube from "../assets/icons/subway.svg";
+import train from "../assets/icons/train.svg";
+import bus from "../assets/icons/bus.svg";
+import taxi from "../assets/icons/taxi.svg";
+
 const Blocks = [
   {
     name: "Tube",
     status: "No Distruption",
-    img: ""
+    img: `${tube}`
   },
   {
     name: "Overground",
     status: "Minor Distruption",
-    img: ""
+    img: `${train}`
   },
   {
     name: "Bus",
     status: "No Distruption",
-    img: ""
+    img: `${bus}`
   },
   {
     name: "Taxi",
     status: "No Distruption",
-    img: ""
+    img: `${taxi}`
   }
 ];
 
 class HomeBlock extends Component {
   render() {
     return (
-      <div class="block-wrapper">
-        {Blocks.map((block, i) => {
-          return (
-            <Block name={block.name} status={block.status} img={block.img} />
-          );
-        })}
-      </div>
+      <Fragment>
+        <div className="title">All</div>
+        <div className="block-wrapper">
+          {Blocks.map((block, i) => {
+            return (
+              <Block
+                key={`block-${i}`}
+                name={block.name}
+                status={block.status}
+                img={block.img}
+              />
+            );
+          })}
+        </div>
+      </Fragment>
     );
   }
 }
